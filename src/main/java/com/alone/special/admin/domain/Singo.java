@@ -5,6 +5,7 @@ public class Singo {
 	private String singoReason;
 	private String singoContent;
 	private String singoLocation;
+	private String singoLocationTitle;
 	private String singoId;
 	
 	public String getSingoNo() {
@@ -31,6 +32,12 @@ public class Singo {
 	public void setSingoLocation(String singoLocation) {
 		this.singoLocation = singoLocation;
 	}
+	public String getSingoLocationTitle() {
+		return singoLocationTitle;
+	}
+	public void setSingoLocationTitle(String singoLocationTitle) {
+		this.singoLocationTitle = singoLocationTitle;
+	}
 	public String getSingoId() {
 		return singoId;
 	}
@@ -40,7 +47,8 @@ public class Singo {
 	@Override
 	public String toString() {
 		return "신고 [번호=" + singoNo + ", 신고이유=" + singoReason + ", 신고내용=" + singoContent
-				+ ", 신고위치=" + singoLocation + ", 신고된아이디=" + singoId + "]";
+				+ ", 신고위치=" + singoLocation + ", 신고위치제목=" + singoLocationTitle + ", 신고된 아이디="
+				+ singoId + "]";
 	}
 	
 }

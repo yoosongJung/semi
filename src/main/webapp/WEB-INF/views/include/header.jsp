@@ -32,7 +32,7 @@
 	            <a href="#">SECURITY</a>
 	         </li>
 	         <li class="nav-item" style="margin-top: 13px;">
-	            <a href="#">관리자 페이지</a>
+	            <a href="/member/list.do">관리자 페이지</a>
 	         </li>
 	      </ul>
 	   </div>

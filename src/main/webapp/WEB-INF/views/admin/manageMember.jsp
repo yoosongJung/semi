@@ -26,13 +26,13 @@
         	<div id="main_left">
                 <table>
                     <tr>
-                        <td style="background-color: black;"><a href="/notice/list.do" style="color:white;">회원관리</a></td>
+                        <td style="background-color: black;"><a href="/member/list.do" style="color:white;">회원관리</a></td>
                     </tr>
                     <tr>
-                        <td><a href="#">신고회원</a></td>
+                        <td><a href="/singo/list.do">신고회원</a></td>
                     </tr>
                     <tr>
-                        <td><a href="#">게시글/리뷰 관리</a></td>
+                        <td><a href="/manageBoard/list.do">게시글/리뷰 관리</a></td>
                     </tr>
                     <tr>
                         <td><a href="#">댓글 관리</a></td>
@@ -40,7 +40,7 @@
                 </table>
             </div>
             <div id="main_middle">
-            	<h2><b>공지 사항</b></h2>
+            	<h2><b>회원 관리</b></h2>
                 <hr>
                 <div class="search">
                     <form action="/member/search.do" method="get">
@@ -72,9 +72,9 @@
 								<td style="text-align:center">${member.userName }</td>
 								<td style="text-align:center">${member.userEmail }</td>
 								<td style="text-align:center">${member.userPhone }</td>
-								<td style="text-align:center">
-									<button>상세정보</button>
-									<button>탈퇴</button>
+								<td style="text-align:center" class="manage">
+									<button class="userDetail" onclick="javascript: location.href='/member/detail.do?userNo=${member.userNo }'">상세정보</button>
+									<button class="userDelete" onclick="deleteCheck();">탈퇴</button>
 								</td>
 							</tr>
 						</c:forEach>
@@ -103,7 +103,14 @@
             <div id="main_right"></div>
         </main>
         <!-- footer -->
-        <jsp:include page="/WEB-INF/views/include/footer.jsp"></jsp:include>	
+        <jsp:include page="/WEB-INF/views/include/footer.jsp"></jsp:include>
+        <script>
+			const deleteCheck = () => {
+				if(confirm("탈퇴 시키겠습니까?")){
+					location.href = "/member/delete.do?userNo=${member.usereNo }";
+				}
+			}
+		</script>	
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 	</body>
 </html>
