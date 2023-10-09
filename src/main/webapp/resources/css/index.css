@@ -1,42 +1,76 @@
-/* main */
-main {
-    /* overflow : hidden + height : auto 했을때 높이 상관없이 요소들어갈때마다 자동으로 늘어남 */
-    /* overflow : clip 하면 hidden 적용 + sticky 사용할 수 있음 */
-    overflow:clip; 
-    height:auto;
-    display: flex;
+.bd-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1071;
+  min-height: 4rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
 }
-    #main_left {
-        width: 15%;
-    }
-    #main_middle {
-        width: 70%;
-    }
-    #main_right {
-    	width: 15%;
-    }
-#main_left {
-  margin-top: 120px;
+.bd-sidebar {
+  position: sticky;
+  z-index: 1000;
+  height: calc(100vh - 4rem);
+  background: #eee;
+  border-right: 1px solid rgba(0,0,0,.1);
+  max-width: 220px;
+  display: flex;
+  padding: 0;
+  overflow-y: hidden;
+  flex-direction: column;
 }
-#main_left table {
-  border: 1px solid black;
-  width: 70%;
-  margin-left: 10%;
-  font-family: 'Nanum Pen Script', cursive;
-  font-size: x-large;
+.bd-sidebar-body {
+  height: 100%;
+  overflow-y: auto;
+  display: block;
 }
-#main_left th {
-  padding: 10px;
-  background-color: rgb(54, 219, 231);
+.bd-sidebar-body .nav {
+  display: block;
 }
-#main_left td {
-  padding: 10px;
-  background-color: rgb(200, 199, 191);
+.bd-sidebar-body .nav>li>a {
+  display: block;
+  padding: .25rem 1.5rem;
+  font-size: 90%;
 }
-#main_left a {
-  text-decoration: none;
+.bd-sidebar-footer {
+  padding: 1rem;
+  background: #ddd;
+  height : 15rem;
 }
-#main_left td:hover {
-  
-  background-color: white;
+.nav {
+	display: block;
+}
+.summer{
+	position : fixed;
+	bottom : 0;
+	z-index : 999;
+	width : 70%;
+	background-color : white;
+	padding : 10px;
+}
+.mainFlex{
+	display : flex;
+}
+.profile{
+	width : 30%;
+	height : 80vh;
+	background-color : gray;
+}
+.calrender{
+	width : 30%;
+	height : 80vh;
+	background-color : yellow;
+}
+.right{
+	width : 30%;
+	height : 80vh;
+}
+.workingTime{
+	height : 50%;
+	text-align: center;
+}
+.workingTime button{
+	margin : 0 20px;
+}
+.calDetail{
+	height : 50%;
+	background-color : skyblue;
 }
