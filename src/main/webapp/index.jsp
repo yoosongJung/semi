@@ -47,7 +47,7 @@
 		      <div class='bd-sidebar-footer'>
 		        참가자
 		        <br>
-		        jys
+		        jys <button>알림 문자</button>
 		      </div>
 		    </div>
 		    <main class="col-9 py-md-3 pl-md-5 bd-content" role="main">
